@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Box</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            color: white;
+            font-size:2rem;
+        }
+        form{
+            margin-top: 4rem;
+        }
+        input{
+            padding:0.4rem;
+            margin:0 0 1rem 4rem;
+        }
+        button{
+            margin-left: 4rem;
+            padding:0.5rem;
+            width: 7rem;
+        }
+        .resualt{
+            margin-left: 4rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <form action="" class="form">
+        <input type="text" placeholder="Enter Your Name" class="first"><br>
+        <input type="password" placeholder="Enter Your Password" class="second"><br>
+        <button type="button" class="btn">Click Me</button>
+        <div class="resualt"></div>
+    </form>
+    <script>
+        let nameInput = document.querySelector(".first");
+        let passwordInput = document.querySelector(".second");
+        let button = document.querySelector(".btn");
+        let ans=document.querySelector(".resualt")
+        button.addEventListener('click', () => {
+            let name=nameInput.value;
+            let password=passwordInput.value;
+            ans.innerHTML="Name: " + name + "<br> Password: "+ password;
+        });
+    </script>
+</body>
+</html>
